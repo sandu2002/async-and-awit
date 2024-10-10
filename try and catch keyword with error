@@ -1,0 +1,14 @@
+//asynchronous
+void main() async {
+  print(1); //1
+
+  try {
+    var futureVal = await Future<int>.delayed(
+        Duration(seconds: 2), () => throw Exception("error occured!"));
+    print(futureVal);
+  } catch (error) {
+    print(error);
+  }
+
+  print(3);
+}
