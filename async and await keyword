@@ -1,0 +1,9 @@
+//asynchronous
+void main() async {
+  print(1); //1
+
+  var futureVal = await Future<int>.delayed(Duration(seconds: 2), () => 2);
+  print(futureVal);
+
+  print(3);
+}
