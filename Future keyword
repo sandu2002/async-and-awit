@@ -1,0 +1,9 @@
+void main() {
+  print(1); //1
+
+  var futureVal = Future<int>.delayed(Duration(seconds: 2), () => 2);
+  futureVal.then((value) => print(value));
+
+  print(3);
+}
+
